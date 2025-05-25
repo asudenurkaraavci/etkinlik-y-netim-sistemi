@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Etkinlikler</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Etkinlik Sistemi</h1>
+        <div>
+            <span id="kullaniciBilgisi"></span>
+            <button id="cikisBtn">Çıkış Yap</button>
+        </div>
+    </header>
+
+    <main>
+        <h2>Etkinlikler</h2>
+        <div id="etkinlikler">
+            <!-- Örnek etkinlikler (normalde JS ile doldurulur) -->
+            <div class="etkinlik">
+                <h3>Konser</h3>
+                <p>Tarih: 15 Aralık 2023</p>
+                <p>Yer: İstanbul</p>
+                <button class="biletBtn">Bilet Al</button>
+            </div>
+            <div class="etkinlik">
+                <h3>Tiyatro</h3>
+                <p>Tarih: 20 Aralık 2023</p>
+                <p>Yer: Ankara</p>
+                <button class="biletBtn">Bilet Al</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        // Kullanıcı bilgisini göster
+        const email = localStorage.getItem('girisYapan');
+        if(email) {
+            document.getElementById('kullaniciBilgisi').textContent = email;
+        } else {
+            window.location.href = "login.html";
+        }
+        
+        // Çıkış butonu
+        document.getElementById('cikisBtn').onclick = function() {
+            localStorage.removeItem('girisYapan');
+            window.location.href = "login.html";
+        };
+        
+        // Bilet butonları
+        document.querySelectorAll('.biletBtn').forEach(btn => {
+            btn.onclick = function() {
+                alert("Bilet alındı! (Sepet sayfasına yönlendirilecek)");
+                // window.location.href = "sepet.html";
+            };
+        });
+    </script>
+</body>
+</html>

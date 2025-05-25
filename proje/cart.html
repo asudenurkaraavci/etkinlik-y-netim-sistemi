@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlik Yönetim - Sepetim</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Etkinlik Yönetim Sistemi</h1>
+        <nav>
+            <a href="#" class="logout" id="cikisButon">Çıkış Yap</a>
+            <a href="home.html" class="back">Geri Dön</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h2>Sepetiniz</h2>
+        <div id="sepetElemanlari"></div>
+
+        <div class="odeme-kismi">
+            <h3>Ödeme Yöntemi</h3>
+            <select id="odemeYontemi">
+                <option value="credit">Kredi Kartı</option>
+                <option value="credit">Banka Havale</option>
+            </select>
+
+            <div class="total">
+                <h3>Toplam: <span id="toplamTutar">0</span> TL</h3>
+                <button class="buton" id="odemeyiTamamla">Ödemeyi Tamamla</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

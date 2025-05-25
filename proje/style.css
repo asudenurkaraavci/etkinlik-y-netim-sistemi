@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #fbfbfb;
+    color: #333;
+}
+
+.container {
+    background-color: #fbfbfb;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background-color: #c4140e;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    color: white; 
+}
+
+nav a {
+    color: white; 
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+h1, h2, h3 {
+    margin-bottom: 15px;
+}
+
+.form-grup {
+    margin-bottom: 15px;
+}
+
+.event-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e8e6e5;
+    border-radius: 4px;
+}
+
+.buton {
+    background-color: #c4140e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.buton:hover {
+    background-color: #a0100b; 
+}
+
+.etkinlik-kart {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    background-color: rgb(226, 223, 223);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.etkinlik-kart h3 {
+    color: #c4140e;
+}
+
+.etkinlik-kart p {
+    margin: 5px 0;
+}
+
+.oneriler {
+    margin: 40px 0;
+    padding: 0;
+}
+
+.oneriler h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #c4140e;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.oneriler h2::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: #c4140e;
+}
+
+.recommended-events {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.recommended-event {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.recommended-event:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.event-img-container {
+    height: 180px;
+    overflow: hidden;
+}
+
+.event-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.recommended-event:hover .event-img {
+    transform: scale(1.05);
+}
+
+.event-content {
+    padding: 20px;
+}
+
+.event-content h3 {
+    color: #c4140e;
+    margin-bottom: 15px;
+}
+
+.event-detail {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.event-detail i {
+    color: #c4140e;
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
+}
+
+.bilet-buton {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #c4140e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.bilet-buton:hover {
+    background-color: #a0100b; 
+}
+
+@media (max-width: 768px) {
+    .recommended-events {
+        grid-template-columns: 1fr;
+    }
+}
+
+.announcement {
+    background-color: #f8f9fa;
+    padding: 25px;
+    border-left: 4px solid #c4140e;
+    margin-bottom: 15px;
+}
+
+#sepetElemanlari {
+    margin-bottom: 30px;
+}
+
+.sepetElemanlari {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    background-color: white;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.odeme-bolumu {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.total {
+    margin-top: 20px;
+    text-align: right;
+}
+
+#toplamTutar {
+    color: #e74c3c;
+    font-size: 1.2rem;
+}
